@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import { Button } from '@/src/components/ui/button'
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <h1>Vite + React</h1>
       <div className='card'>
         <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+        <Button> 버튼 </Button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>

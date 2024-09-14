@@ -10,8 +10,10 @@ function App() {
     <div className='App'>
       <Header />
       <Body name={name} />
+      <button />
       <Footer />
     </div>
   )
 }
+
 export default App

@@ -5,12 +5,11 @@ import Body from '@/components/Body.jsx'
 import Footer from '@/components/Footer.jsx'
 
 function App() {
-  const name = 'Bonobono'
+  const name = '보노보노'
   return (
     <div className='App'>
       <Header />
       <Body name={name} />
-      <button />
       <Footer />
     </div>
   )

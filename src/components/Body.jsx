@@ -1,9 +1,10 @@
 // import '@/components/Body.css'
+// import { PlayCircleIcon } from 'lucide-react'
 import PropTypes from 'prop-types'
 
 function Body(props) {
   console.log(props)
-  return <div className='body'>{props.name}</div>
+  return <div className='body'>{props.name}는 숲속마을에 거주합니다.</div>
 }
 
 // props 타입 검증 설정

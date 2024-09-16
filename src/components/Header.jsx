@@ -1,7 +1,10 @@
 function Header() {
   return (
     <header>
-      <h1>StudyHub</h1>
+      <h1>
+        <strong>header</strong>
+        {/* <br /> */}
+      </h1>
     </header>
   )
 }

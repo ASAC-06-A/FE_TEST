@@ -1,16 +1,21 @@
-import { useForm } from 'react-hook-form'
+import '@/App.css'
+import Header from '@/components/Header'
+import Body from '@/components/Body'
+import Footer from '@/components/Footer'
 
 function App() {
-  const { register, watch } = useForm()
-
-  // watch로 해당 input 필드를 구독하여 값의 변화를 감지할 수 있다.
-  console.log(watch('id'))
+  const BodyProps = {
+    name: '천룡인',
+    location: '숲속마을',
+    // favorList: ['파스타', '빵', '떡볶이'],
+  }
 
   return (
-    <form>
-      <input {...register('id')} />
-      <button>Login</button>
-    </form>
+    <div className='App'>
+      <Header />
+      <Body {...BodyProps} />
+      <Footer />
+    </div>
   )
 }
 export default App

@@ -1,24 +1,16 @@
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { form } from '@/components/ui/form'
-
-import './App.css'
-import Header from '@/components/Header.jsx'
-import Body from '@/components/Body.jsx'
-import Footer from '@/components/Footer.jsx'
+import { useForm } from 'react-hook-form'
 
 function App() {
-  const name = '천룡인'
-  const location = '숲속마을'
+  const { register, watch } = useForm()
+
+  // watch로 해당 input 필드를 구독하여 값의 변화를 감지할 수 있다.
+  console.log(watch('id'))
 
   return (
-    <div className='App'>
-      <Header />
-      <Body name={name} location={location} />
-      <Input />
-      <form />
-      <Footer />
-    </div>
+    <form>
+      <input {...register('id')} />
+      <button>Login</button>
+    </form>
   )
 }
 export default App

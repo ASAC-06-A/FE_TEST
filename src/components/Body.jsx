@@ -1,40 +1,39 @@
 import { useState } from 'react'
 
 function Body() {
-  const [name, setName] = useState('')
-  const [gender, setGender] = useState('')
-  const [birth, setBirth] = useState('')
-  const [bio, setBio] = useState('')
+  const [state, setState] = useState({
+    name: '',
+    gender: '',
+    birth: '',
+    bio: '',
+  })
 
-  const onChangeName = (e) => {
-    setName(e.target.value)
-  }
-  const onChangeGender = (e) => {
-    setGender(e.target.value)
-  }
-  const onChangeBirth = (e) => {
-    setBirth(e.target.value)
-  }
-  const onChangeBio = (e) => {
-    setBio(e.target.value)
+  const handleOnChange = (e) => {
+    console.log('현재 수정 대상 : ', e.target.name)
+    console.log('수정값 : ', e.target.value)
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    })
   }
   return (
     <div>
       <div>
-        <input value={name} onChange={onChangeName} placeholder='이름' />
+        <input name='name' value={state.name} onChange={handleOnChange} placeholder='이름' />
       </div>
       <div>
-        <select value={gender} onChange={onChangeGender}>
+        <select name='gender' value={state.gender} onChange={handleOnChange}>
           <option key={''}></option>
-          <option key={'여성'}></option>
-          <option key={'남성'}></option>
+          <option key={'여성'}>여성</option>
+          <option key={'남성'}>남성</option>
+          <option key={'기타'}>기타</option>
         </select>
       </div>
       <div>
-        <input type='date' value={birth} onChange={onChangeBirth} />
+        <input name='birth' type='date' value={state.birth} onChange={handleOnChange} />
       </div>
       <div>
-        <textarea value={bio} onChange={onChangeBio} />
+        <textarea name='bio' value={state.bio} onChange={handleOnChange} />
       </div>
     </div>
   )

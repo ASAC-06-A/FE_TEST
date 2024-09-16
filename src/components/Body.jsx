@@ -1,8 +1,8 @@
 import '@/components/Body.css'
 import { useState } from 'react'
 
-function Viewer({ number }) {
-  return <div>{number % 2 === 0 ? <h2>짝수</h2> : <h2>홀수</h2>}</div>
+function Viewer() {
+  console.log('viewer component update!')
 }
 
 function Body() {
@@ -16,7 +16,7 @@ function Body() {
   return (
     <div>
       <h2>{number}</h2>
-      <Viewer number={number} />
+      <Viewer />
 
       <div>
         <button onClick={onDecrease}>-</button>

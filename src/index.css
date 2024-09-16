@@ -45,6 +45,15 @@ input {
   border: 1px solid;
 }
 
+option {
+  background-color: white;
+}
+
+select {
+  background-color: white;
+  border: 1px solid;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

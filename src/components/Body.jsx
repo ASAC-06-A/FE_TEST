@@ -1,16 +1,15 @@
+import { useState } from 'react'
+
 function Body() {
-  function handleOnClick(e) {
-    console.log(e)
-    console.log(e.target.name)
+  const [date, setDate] = useState('')
+  const handelOnChange = (e) => {
+    console.log('변경된 값', e.target.value)
+    setData(e.target.value)
   }
+
   return (
-    <div className='body'>
-      <button name='A버튼' onClick={handleOnClick}>
-        A버튼
-      </button>
-      <button name='B버튼' onClick={handleOnClick}>
-        B버튼
-      </button>
+    <div>
+      <input type='date' value={date} onChange={handelOnChange} />
     </div>
   )
 }

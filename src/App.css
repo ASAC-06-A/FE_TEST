@@ -10,16 +10,6 @@
   width: 500px;
 }
 
-/* className=App 요소의 <section>태그를 가리키는 CSS 문법. 
- * 이 스타일 규칙은 App 컴포넌트 최상위 태그 바로 아래의 <section>에만 적용됩니다. */
-.App > section {
-  padding: 20px;
-  background-color: rgb(245, 245, 245);
-  border: 1px solid rgb(240, 240, 240);
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
 .avatar {
   border-radius: 50%;
 }
@@ -29,12 +19,6 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 @keyframes logo-spin {
@@ -83,4 +67,11 @@ button:hover {
 
 body {
   padding: 20px;
+}
+
+li {
+  list-style-type: disc;
+  text-align: left;
+  background-color: gray;
+  color: pink;
 }

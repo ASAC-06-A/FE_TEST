@@ -1,24 +1,13 @@
-import '@/App.css'
-import { useState } from 'react'
-import Viewer from '@/components/Viewer'
-import Controller from '@/components/Controller'
-
-function App() {
-  const [count, setCount] = useState(0)
-  const handleSetCount = (value) => {
-    setCount(count + value)
-  }
-
+export default function TodoList() {
   return (
-    <div className='App'>
-      <h1>Simple Counter</h1>
-      <section>
-        <Viewer count={count} />
-      </section>
-      <section>
-        <Controller handleSetCount={handleSetCount} />
-      </section>
-    </div>
+    <>
+      <h1>Hedy Lamarr's Todos'</h1>
+      <img src='https://i.imgur.com/yXOvdOSs.jpg' alt='Hedy Lamarr' className='photo' />
+      <ul>
+        <li>Invent new traffic lights</li>
+        <li>Rehearse a movie scene</li>
+        <li>Improve the spectrum technology</li>
+      </ul>
+    </>
   )
 }
-export default App
